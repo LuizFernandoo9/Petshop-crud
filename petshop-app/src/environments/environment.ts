@@ -1,4 +1,5 @@
 export const environment = {
+  production: false,
   firebaseConfig : {
     apiKey: "AIzaSyClunpvTuLzSM2xyOA5q7a2SOIsmWYzw0Y",
     authDomain: "petshop-4d047.firebaseapp.com",

@@ -1,1 +1,38 @@
-<p>pet-form works!</p>
+<div>
+  <h2>{{ isEdit ? 'Edit Pet' : 'Add New Pet' }}</h2>
+  <form (ngSubmit)="savePet()">
+    <label>
+      Name:
+      <input [(ngModel)]="pet.name" name="name" required>
+    </label>
+    <label>
+      Species:
+      <input [(ngModel)]="pet.species" name="species" required>
+    </label>
+    <label>
+      Age:
+      <input [(ngModel)]="pet.age" name="age" type="number" required>
+    </label>
+    <label>
+      Birth Date:
+      <input [(ngModel)]="pet.birthDate" name="birthDate" type="date" required>
+    </label>
+    <label>
+      Weight:
+      <input [(ngModel)]="pet.weight" name="weight" type="number" required>
+    </label>
+    <label>
+      Color:
+      <input [(ngModel)]="pet.color" name="color" required>
+    </label>
+    <label>
+      Sex:
+      <select [(ngModel)]="pet.sex" name="sex" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </label>
+    <button type="submit">{{ isEdit ? 'Update' : 'Create' }}</button>
+  </form>
+</div>

@@ -1,5 +1,5 @@
 export interface Solicitacao {
-  id?: string;
+  id: string;
   petId: string;
   tutorId: string;
   servicoId: string;

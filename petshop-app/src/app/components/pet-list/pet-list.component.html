@@ -1,1 +1,17 @@
-<p>pet-list works!</p>
+<div>
+  <h2>Pets List</h2>
+  <button routerLink="/pets/new">Add New Pet</button>
+  <ul>
+    <li *ngFor="let pet of pets">
+      {{ pet.name }} ({{ pet.species }})
+      <button class="edit" (click)="editPet(pet.id)">Edit</button>
+      <button class="delete" (click)="deletePet(pet.id)">Delete</button>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+

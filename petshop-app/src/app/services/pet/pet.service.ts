@@ -9,22 +9,27 @@ import { Pet } from '../../models/pet.model';
 export class PetService {
   private collectionName = 'pets';
 
-  constructor(private firestore: AngularFirestore) {}
+  constructor(private firestore: AngularFirestore) { }
+
+  getPets(): Observable<Pet[]> {
+    return this.firestore.collection<Pet>(this.collectionName).valueChanges({ idField: 'id' });
+  }
+
+  getPet(id: string): Observable<Pet> {
+    return this.firestore.collection<Pet>(this.collectionName).doc(id).valueChanges() as Observable<Pet>;
+  }
 
   createPet(pet: Pet): Promise<void> {
     const id = this.firestore.createId();
-    return this.firestore.doc(`${this.collectionName}/${id}`).set({ id, ...pet });
-  }
-
-  getPets(): Observable<Pet[]> {
-    return this.firestore.collection<Pet>(this.collectionName).valueChanges();
+    pet.id = id;
+    return this.firestore.collection(this.collectionName).doc(id).set(pet);
   }
 
   updatePet(id: string, pet: Pet): Promise<void> {
-    return this.firestore.doc(`${this.collectionName}/${id}`).update(pet);
+    return this.firestore.collection(this.collectionName).doc(id).update(pet);
   }
 
   deletePet(id: string): Promise<void> {
-    return this.firestore.doc(`${this.collectionName}/${id}`).delete();
+    return this.firestore.collection(this.collectionName).doc(id).delete();
   }
 }

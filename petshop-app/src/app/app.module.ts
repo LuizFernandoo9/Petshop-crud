@@ -12,6 +12,7 @@ import { ServicoComponent } from './components/servico/servico.component';
 import { SolicitacaoComponent } from './components/solicitacao/solicitacao.component';
 import { PetListComponent } from './components/pet-list/pet-list.component';
 import { PetFormComponent } from './components/pet-form/pet-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PetFormComponent } from './components/pet-form/pet-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],
