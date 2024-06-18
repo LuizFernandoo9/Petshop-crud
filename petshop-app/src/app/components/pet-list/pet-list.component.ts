@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Pet } from '../../models/pet.model';
 import { Router } from '@angular/router';
 import { PetService } from '../../services/pet/pet.service';

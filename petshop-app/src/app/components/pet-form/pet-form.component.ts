@@ -44,11 +44,15 @@ export class PetFormComponent implements OnInit {
       this.petService.updatePet(this.pet.id!, this.pet).then(() => {
         console.log('Pet updated successfully');
         this.router.navigate(['/pets']);
+      }).catch(error => {
+        console.error('Error updating pet: ', error);
       });
     } else {
       this.petService.createPet(this.pet).then(() => {
         console.log('Pet created successfully');
         this.router.navigate(['/pets']);
+      }).catch(error => {
+        console.error('Error creating pet: ', error);
       });
     }
   }
