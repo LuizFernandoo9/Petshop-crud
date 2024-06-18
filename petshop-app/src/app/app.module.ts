@@ -10,6 +10,8 @@ import { PetComponent } from './components/pet/pet.component';
 import { TutorComponent } from './components/tutor/tutor.component';
 import { ServicoComponent } from './components/servico/servico.component';
 import { SolicitacaoComponent } from './components/solicitacao/solicitacao.component';
+import { PetListComponent } from './components/pet-list/pet-list.component';
+import { PetFormComponent } from './components/pet-form/pet-form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { SolicitacaoComponent } from './components/solicitacao/solicitacao.compo
     PetComponent,
     TutorComponent,
     ServicoComponent,
-    SolicitacaoComponent
+    SolicitacaoComponent,
+    PetListComponent,
+    PetFormComponent
   ],
   imports: [
     BrowserModule,

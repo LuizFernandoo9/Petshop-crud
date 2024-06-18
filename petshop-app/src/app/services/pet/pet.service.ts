@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
-import { Pet } from '../models/pet.model';
+import { Pet } from '../../models/pet.model';
 
 @Injectable({
   providedIn: 'root'
