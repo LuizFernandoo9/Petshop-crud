@@ -1,39 +1,16 @@
-<div class="tutor-list-container">
-  <!-- Título da lista de tutores -->
-  <h2>Tutor Lista</h2>
+<div>
+  <!-- Título da lista de pets -->
+  <h2>Pets Lista</h2>
 
-  <!-- Lista de tutores -->
-  <ul class="tutor-list">
-<<<<<<< HEAD
-    <!-- Itera sobre a lista de tutores e cria um item de lista para cada tutor -->
-=======
-     <!-- Lista não ordenada que conterá todos os tutores -->
->>>>>>> abf44501e0e6db5e91b3b229c943ba9bc2bb952c
-    <li *ngFor="let tutor of tutors" class="tutor-item">
-      <!-- Mostra o nome e telefone do tutor -->
-      <span class="tutor-details">{{ tutor.name }} - {{ tutor.phone }}</span>
-<<<<<<< HEAD
-      <!-- Ações disponíveis para cada tutor -->
-      <div class="tutor-actions">
-        <!-- Botão para editar o tutor, chama a função editTutor com o ID do tutor -->
-        <button class="edit" (click)="editTutor(tutor.id)" aria-label="Editar {{ tutor.name }}">Editar</button>
-        <!-- Botão para deletar o tutor, chama a função deleteTutor com o ID do tutor -->
-=======
-       <!-- Exibe os detalhes do tutor, nome e telefone -->
-      <div class="tutor-actions">
-         <!-- Div para agrupar as ações relacionadas a cada tutor -->
-        <button class="edit" (click)="editTutor(tutor.id)" aria-label="Editar {{ tutor.name }}">Editar</button>
-        <!-- Botão para editar o tutor -->
-        <!-- Evento (click) que chama a função editTutor passando o ID do tutor -->
->>>>>>> abf44501e0e6db5e91b3b229c943ba9bc2bb952c
-        <button class="delete" (click)="deleteTutor(tutor.id)" aria-label="Deletar {{ tutor.name }}">Deletar</button>
-        <!-- Botão para deletar o tutor -->
-        <!-- Evento (click) que chama a função deleteTutor passando o ID do tutor -->
-      </div>
+  <!-- Lista de pets -->
+  <ul>
+    <!-- sobre a lista de pets e cria um item de lista para cada pet -->
+    <li *ngFor="let pet of pets">
+      <!-- Exibe o nome e a espécie do pet -->
+      {{ pet.name }} ({{ pet.species }})
+      <button class="edit" (click)="editPet(pet.id)">Edit</button>
+      <button class="delete" (click)="deletePet(pet.id)">Delete</button>
     </li>
   </ul>
-  
-  <!-- Botão para adicionar um novo tutor, direciona para a rota de adição de tutor -->
-  <button class="add" routerLink="/add-tutor">Adicionar novo tutor</button>
-  <!-- Botão para adicionar um novo tutor -->
+  <button class="add"routerLink="/pets/new">Add New Pet</button>
 </div>
