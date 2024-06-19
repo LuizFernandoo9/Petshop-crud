@@ -1,12 +1,12 @@
 <div>
-  <h2>Services List</h2>
+  <h2>Lista de Serviços</h2>
   <ul>
     <li *ngFor="let service of servicos$ | async">
       {{ service.name }} - {{ service.description }} - R$ {{ service.price }} - {{ service.duration }} minutos
       <!-- botão adicionar serviço -->
-      <button class="delete" (click)="deleteService(service.id!)">Delete</button>
+      <button class="delete" (click)="deleteService(service.id!)">Deletar</button>
     </li>
   </ul>
   <!-- botão adicionar serviço -->
-  <button class="add" routerLink="/add-service">Add New Service</button>
+  <button class="add" routerLink="/add-service">Novo Serviço</button>
 </div>

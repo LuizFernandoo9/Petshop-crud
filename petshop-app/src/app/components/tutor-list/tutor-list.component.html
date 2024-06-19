@@ -1,16 +1,12 @@
 <div>
-  <!-- Título da lista de pets -->
-  <h2>Pets Lista</h2>
+  <h2>Lista de Tutores</h2>
 
-  <!-- Lista de pets -->
   <ul>
-    <!-- sobre a lista de pets e cria um item de lista para cada pet -->
-    <li *ngFor="let pet of pets">
-      <!-- Exibe o nome e a espécie do pet -->
-      {{ pet.name }} ({{ pet.species }})
-      <button class="edit" (click)="editPet(pet.id)">Edit</button>
-      <button class="delete" (click)="deletePet(pet.id)">Delete</button>
+    <li *ngFor="let tutor of tutors">
+      {{ tutor.name }} - {{ tutor.phone }}
+      <button class="edit" (click)="editTutor(tutor.id)">Editar</button>
+      <button class="delete" (click)="deleteTutor(tutor.id)">Deletar</button>
     </li>
   </ul>
-  <button class="add"routerLink="/pets/new">Add New Pet</button>
+  <button class="add"routerLink="/add-tutor">Novo Tutor</button>
 </div>
