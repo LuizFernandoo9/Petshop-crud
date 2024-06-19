@@ -1,24 +1,30 @@
 <div>
   <h2>Adicionar Solicitação</h2>
   <form (ngSubmit)="addSolicitacao()">
+
+    <!-- Seleção de pets -->
     <label for="pet">Pet:</label>
     <select id="pet" [(ngModel)]="solicitacao.petId" name="petId" required>
       <option *ngFor="let pet of pets" [value]="pet.id">{{ pet.name }}</option>
     </select>
 
+    <!-- Seleção de tutores -->
     <label for="tutor">Tutor:</label>
     <select id="tutor" [(ngModel)]="solicitacao.tutorId" name="tutorId" required>
       <option *ngFor="let tutor of tutores" [value]="tutor.id">{{ tutor.name }}</option>
     </select>
 
+    <!-- Seleção de serviços -->
     <label for="servico">Serviço:</label>
     <select id="servico" [(ngModel)]="solicitacao.servicoId" name="servicoId" required>
       <option *ngFor="let servico of servicos" [value]="servico.id">{{ servico.name }}</option>
     </select>
 
+    <!-- Campo de entrada para a data da solicitação -->
     <label for="data">Data:</label>
     <input id="data" type="date" [(ngModel)]="solicitacao.data" name="data" required>
 
+    <!-- Botão para submeter o formulário -->
     <button type="submit">Adicionar Solicitação</button>
   </form>
 </div>

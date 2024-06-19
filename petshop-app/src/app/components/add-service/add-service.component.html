@@ -1,15 +1,20 @@
 <form (submit)="onSubmit()">
+  <!-- Campo de entrada para o nome do serviço -->
   <label for="nome">Nome do serviço:</label>
   <input type="text" id="nome" name="nome" [(ngModel)]="nome" required>
 
+  <!-- Campo de entrada para a descrição do serviço -->
   <label for="descricao">Descrição do serviço:</label>
   <textarea id="descricao" name="descricao" [(ngModel)]="descricao" required></textarea>
 
+  <!-- Campo de entrada para o preço do serviço -->
   <label for="preco">Preço do serviço:</label>
   <input type="number" id="preco" name="preco" [(ngModel)]="preco" required>
 
+  <!-- Campo de entrada para a duração do serviço -->
   <label for="duracao">Duração do serviço (em minutos):</label>
   <input type="number" id="duracao" name="duracao" [(ngModel)]="duracao" required>
 
+  <!-- Botão para submeter o formulário -->
   <button type="submit">Adicionar Serviço</button>
 </form>
