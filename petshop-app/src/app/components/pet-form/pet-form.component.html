@@ -26,11 +26,12 @@
       <input [(ngModel)]="pet.color" name="color" required>
     </label>
     <label>
+      // sexo dos animais
       Sex:
       <select [(ngModel)]="pet.sex" name="sex" required>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Other">Other</option>
+        <option value="Male">Macho</option>
+        <option value="Female">Femuno</option>
+        <option value="Other">Outro</option>
       </select>
     </label>
     <button type="submit">{{ isEdit ? 'Update' : 'Create' }}</button>
