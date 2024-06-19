@@ -1,39 +1,58 @@
 <div>
+  <!-- Título dinâmico que muda entre 'Edit Pet' e 'Add New Pet' com base na variável isEdit -->
   <h2>{{ isEdit ? 'Edit Pet' : 'Add New Pet' }}</h2>
+  
+  <!-- Formulário que chama a função savePet ao ser enviado -->
   <form (ngSubmit)="savePet()">
+    
+    <!-- Campo para o nome do pet -->
     <label>
-      Name:
+      Nome:
       <input [(ngModel)]="pet.name" name="name" required>
     </label>
+    
+    <!-- Campo para a espécie do pet -->
     <label>
-      Species:
+      Espécie:
       <input [(ngModel)]="pet.species" name="species" required>
     </label>
+    
+    <!-- Campo para a idade do pet -->
     <label>
-      Age:
+      Idade:
       <input [(ngModel)]="pet.age" name="age" type="number" required>
     </label>
+    
+    <!-- Campo para a data de nascimento do pet -->
     <label>
-      Birth Date:
+      Data de Aniversário:
       <input [(ngModel)]="pet.birthDate" name="birthDate" type="date" required>
     </label>
+    
+    <!-- Campo para o peso do pet -->
     <label>
-      Weight:
+      Peso:
       <input [(ngModel)]="pet.weight" name="weight" type="number" required>
     </label>
+    
+    <!-- Campo para a cor do pet -->
     <label>
-      Color:
+      Cor:
       <input [(ngModel)]="pet.color" name="color" required>
     </label>
+    
+    <!-- Campo para o sexo do pet -->
     <label>
-      // sexo dos animais
-      Sex:
+      <!-- Comentário: sexo dos animais -->
+      Sexo:
       <select [(ngModel)]="pet.sex" name="sex" required>
         <option value="Male">Macho</option>
-        <option value="Female">Femino</option>
+        <option value="Female">Feminino</option>
         <option value="Other">Outro</option>
       </select>
     </label>
+    
+    <!-- Botão de envio do formulário -->
     <button type="submit">{{ isEdit ? 'Update' : 'Create' }}</button>
   </form>
 </div>
