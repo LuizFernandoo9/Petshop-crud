@@ -4,7 +4,7 @@
     <li *ngFor="let service of servicos$ | async">
       {{ service.name }} - {{ service.description }} - R$ {{ service.price }} - {{ service.duration }} minutos
       <!-- botão adicionar serviço -->
-      <button class="delete" (click)="deleteService(service.id!)">Deletar</button>
+      <button class="delete" (click)="deleteService(service.id!)">Excluir</button>
     </li>
   </ul>
   <!-- botão adicionar serviço -->
