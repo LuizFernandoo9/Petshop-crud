@@ -2,14 +2,22 @@
   <h2>Tutor List</h2>
 
   <ul class="tutor-list">
+     <!-- Lista não ordenada que conterá todos os tutores -->
     <li *ngFor="let tutor of tutors" class="tutor-item">
       <span class="tutor-details">{{ tutor.name }} - {{ tutor.phone }}</span>
+       <!-- Exibe os detalhes do tutor, nome e telefone -->
       <div class="tutor-actions">
+         <!-- Div para agrupar as ações relacionadas a cada tutor -->
         <button class="edit" (click)="editTutor(tutor.id)" aria-label="Editar {{ tutor.name }}">Editar</button>
+        <!-- Botão para editar o tutor -->
+        <!-- Evento (click) que chama a função editTutor passando o ID do tutor -->
         <button class="delete" (click)="deleteTutor(tutor.id)" aria-label="Deletar {{ tutor.name }}">Deletar</button>
+        <!-- Botão para deletar o tutor -->
+        <!-- Evento (click) que chama a função deleteTutor passando o ID do tutor -->
       </div>
     </li>
   </ul>
   
   <button class="add" routerLink="/add-tutor">Adicionar novo tutor</button>
+  <!-- Botão para adicionar um novo tutor -->
 </div>
