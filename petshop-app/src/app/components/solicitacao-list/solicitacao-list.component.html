@@ -1,10 +1,14 @@
 <div>
   <h2>Solicitações</h2>
+  <!-- Cabeçalho do componente, indicando a seção de solicitações -->
   <ul>
     <li *ngFor="let solicitacao of solicitacoes$ | async">
+       <!-- Chama funções para obter nomes dos pets, tutores e serviços e exibe a data da solicitação -->
       <span>{{ getPetName(solicitacao.petId) }} - {{ getTutorName(solicitacao.tutorId) }} - {{ getServicoName(solicitacao.servicoId) }} - {{ solicitacao.data }}</span>
+       <!-- Botão para excluir uma solicitação específica -->
       <button class = "delete"(click)="deleteSolicitacao(solicitacao.id!)">Deletar</button>
     </li>
   </ul>
+  <!-- Botão para navegar para a página de adição de uma nova solicitação -->
   <button class="add"routerLink="/add-solicitacao"> Adicine uma solicitação</button>
 </div>
