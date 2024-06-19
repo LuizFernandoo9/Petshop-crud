@@ -4,9 +4,9 @@
   <ul>
     <li *ngFor="let tutor of tutors">
       {{ tutor.name }} - {{ tutor.phone }}
-      <button class="edit" (click)="editTutor(tutor.id)">Edit</button>
-      <button class="delete" (click)="deleteTutor(tutor.id)">Delete</button>
+      <button class="edit" (click)="editTutor(tutor.id)">Editar</button>
+      <button class="delete" (click)="deleteTutor(tutor.id)">Deletar</button>
     </li>
   </ul>
-  <button class="add" routerLink="/add-tutor">Add New Tutor</button>
+  <button class="add" routerLink="/add-tutor">Adicionar novo tutor</button>
 </div>
