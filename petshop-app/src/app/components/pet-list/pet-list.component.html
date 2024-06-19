@@ -8,13 +8,9 @@
     <li *ngFor="let pet of pets">
       <!-- Exibe o nome e a espécie do pet -->
       {{ pet.name }} ({{ pet.species }})
-      <!-- Botão para editar o pet, chama a função editPet com o ID do pet -->
       <button class="edit" (click)="editPet(pet.id)">Edit</button>
-      <!-- Botão para deletar o pet, chama a função deletePet com o ID do pet -->
       <button class="delete" (click)="deletePet(pet.id)">Delete</button>
     </li>
   </ul>
-
-  <!-- Botão para adicionar um novo pet, direciona para a rota de criação de novo pet -->
-  <button class="add" routerLink="/pets/new">Add New Pet</button>
+  <button class="add"routerLink="/pets/new">Add New Pet</button>
 </div>
