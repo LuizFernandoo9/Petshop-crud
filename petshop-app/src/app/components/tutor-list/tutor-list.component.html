@@ -1,12 +1,15 @@
-<div>
+<div class="tutor-list-container">
   <h2>Tutor List</h2>
 
-  <ul>
-    <li *ngFor="let tutor of tutors">
-      {{ tutor.name }} - {{ tutor.phone }}
-      <button class="edit" (click)="editTutor(tutor.id)">Editar</button>
-      <button class="delete" (click)="deleteTutor(tutor.id)">Deletar</button>
+  <ul class="tutor-list">
+    <li *ngFor="let tutor of tutors" class="tutor-item">
+      <span class="tutor-details">{{ tutor.name }} - {{ tutor.phone }}</span>
+      <div class="tutor-actions">
+        <button class="edit" (click)="editTutor(tutor.id)" aria-label="Editar {{ tutor.name }}">Editar</button>
+        <button class="delete" (click)="deleteTutor(tutor.id)" aria-label="Deletar {{ tutor.name }}">Deletar</button>
+      </div>
     </li>
   </ul>
+  
   <button class="add" routerLink="/add-tutor">Adicionar novo tutor</button>
 </div>
