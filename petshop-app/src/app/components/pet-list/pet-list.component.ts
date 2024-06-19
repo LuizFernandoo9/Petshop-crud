@@ -9,6 +9,7 @@ import { PetService } from '../../services/pet/pet.service';
   styleUrls: ['./pet-list.component.css']
 })
 export class PetListComponent implements OnInit {
+
   pets: Pet[] = [];
 
   constructor(private petService: PetService, private router: Router) {}
