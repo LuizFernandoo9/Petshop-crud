@@ -4,10 +4,13 @@
   <ul>
     <li *ngFor="let pet of pets">
       {{ pet.name }} ({{ pet.species }})
+      <!-- botão para editar -->
       <button class="edit" (click)="editPet(pet.id)">Edit</button>
+      <!-- botão para deletar -->
       <button class="delete" (click)="deletePet(pet.id)">Delete</button>
     </li>
   </ul>
+  <!-- botão para adicionar novo pet -->
   <button class="add"routerLink="/pets/new">Add New Pet</button>
 </div>
 
