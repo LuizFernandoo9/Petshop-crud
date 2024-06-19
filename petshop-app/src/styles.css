@@ -87,3 +87,11 @@ button.delete:hover {
   background-color: #c9302c;
 }
 
+button.add{
+  background-color: #4cae4c;
+  color: white;
+}
+
+button.add:hover{
+  background-color: #4f864f;
+}

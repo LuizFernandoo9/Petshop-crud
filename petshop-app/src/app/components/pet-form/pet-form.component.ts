@@ -19,6 +19,12 @@ export class PetFormComponent implements OnInit {
     color: '',
     sex: ''
   };
+
+  sexOptions: any[] = [
+    { label: 'Macho', value: 'M' },
+    { label: 'Fêmea', value: 'F' }
+  ];
+  
   isEdit: boolean = false;
 
   constructor(

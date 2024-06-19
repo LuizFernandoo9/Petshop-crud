@@ -1,11 +1,16 @@
-<div>
-  <ul>
-    <a routerLink="/solicitacoes" routerLinkActive="active">Solicitações</a>
-    <li><a routerLink="/pets">Pets</a></li>
-    <li><a routerLink="/tutors">Tutors</a></li>
-    <li><a routerLink="/services">Services</a></li>
-  </ul>
-  <div class="container">
+<div class="layout-wrapper">
+  <header>
+    <h1>Petshop Management System</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a routerLink="/solicitacoes" routerLinkActive="active">Solicitações</a></li>
+      <li><a routerLink="/pets" routerLinkActive="active">Pets</a></li>
+      <li><a routerLink="/tutors" routerLinkActive="active">Tutores</a></li>
+      <li><a routerLink="/services" routerLinkActive="active">Serviços</a></li>
+    </ul>
+  </nav>
+  <main>
     <router-outlet></router-outlet>
-  </div>
+  </main>
 </div>
