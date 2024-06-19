@@ -42,7 +42,7 @@ export class PetService {
   }
 
   updatePet(id: string, pet: Pet): Promise<void> {
-    return this.petsCollection.doc(id).update(pet)
+    return this.petsCollection.doc(pet.id).update(pet)
       .then(() => {
         console.log('Pet updated successfully');
       })

@@ -1,0 +1,10 @@
+<div>
+  <h2>Tutor List</h2>
+  <ul>
+    <li *ngFor="let tutor of tutors">
+      {{ tutor.name }} - {{ tutor.phone }}
+      <button class="edit" (click)="editTutor(tutor.id)">Edit</button>
+      <button class="delete" (click)="deleteTutor(tutor.id)">Delete</button>
+    </li>
+  </ul>
+</div>

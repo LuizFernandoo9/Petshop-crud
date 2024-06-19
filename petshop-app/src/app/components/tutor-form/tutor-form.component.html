@@ -1,0 +1,54 @@
+<div class="container">
+  <h2>{{ tutorId ? 'Edit' : 'Add' }} Tutor</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="tutor.name" name="name" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" [(ngModel)]="tutor.cep" name="cep" class="form-control" (blur)="searchCep()" required />
+    </div>
+    <div class="form-group">
+      <label for="street">Street:</label>
+      <input type="text" id="street" [(ngModel)]="tutor.street" name="street" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label for="neighborhood">Neighborhood:</label>
+      <input type="text" id="neighborhood" [(ngModel)]="tutor.neighborhood" name="neighborhood" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label for="number">Number:</label>
+      <input type="number" id="number" [(ngModel)]="tutor.number" name="number" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label for="state">State:</label>
+      <select id="state" [(ngModel)]="tutor.state" name="state" class="form-control" (change)="loadCities(tutor.state)" required>
+        <option *ngFor="let state of states" [value]="state.sigla">{{ state.nome }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="city">City:</label>
+      <select id="city" [(ngModel)]="tutor.city" name="city" class="form-control" required>
+        <option *ngFor="let city of cities" [value]="city.nome">{{ city.nome }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" [(ngModel)]="tutor.phone" name="phone" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" [(ngModel)]="tutor.cpf" name="cpf" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label for="sex">Sex:</label>
+      <select id="sex" [(ngModel)]="tutor.sex" name="sex" class="form-control" required>
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+        <option value="Outro">Outro</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">{{ tutorId ? 'Update' : 'Add' }}</button>
+  </form>
+</div>

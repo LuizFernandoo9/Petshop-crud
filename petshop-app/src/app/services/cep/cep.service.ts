@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
-import axios from 'axios';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CepService {
-  constructor() {}
+  private viaCepUrl = 'https://viacep.com.br/ws';
 
-  async getAddressByCep(cep: string): Promise<any> {
-    try {
-      const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
-      return response.data;
-    } catch (error) {
-      console.error(error);
-    }
+  constructor(private http: HttpClient) {}
+
+  getAddressByCep(cep: string): Observable<any> {
+    return this.http.get(`${this.viaCepUrl}/${cep}/json/`);
   }
 }
