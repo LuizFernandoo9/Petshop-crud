@@ -1,2 +1,42 @@
+.tutor-list-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: 300px;
+  margin: 0 auto;
+}
 
+.tutor-list {
+  list-style-type: none;
+  padding: 0;
+}
 
+.tutor-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tutor-details {
+  font-weight: bold;
+}
+
+.tutor-actions button {
+  margin-left: 10px;
+}
+
+.add {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add:hover {
+  background-color: #0056b3;
+}
