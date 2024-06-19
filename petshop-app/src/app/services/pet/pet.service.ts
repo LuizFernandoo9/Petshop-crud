@@ -30,15 +30,9 @@ export class PetService {
   }
 
   createPet(pet: Pet): Promise<void> {
-    // Remove 'id' field from pet object to allow Firestore to generate an automatic ID
-    const { ...petWithoutId } = pet;
-    return this.petsCollection.add(petWithoutId)
-      .then(docRef => {
-        console.log('Pet added with ID: ', docRef.id);
-      })
-      .catch(error => {
-        console.error('Error adding pet: ', error);
-      });
+    const id = this.firestore.createId(); 
+    const petWithId = { ...pet, id };
+    return this.petsCollection.doc(id).set(petWithId);
   }
 
   updatePet(id: string, pet: Pet): Promise<void> {
