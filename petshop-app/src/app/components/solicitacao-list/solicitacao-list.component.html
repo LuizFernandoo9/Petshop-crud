@@ -1,0 +1,10 @@
+<div>
+  <h2>Solicitações</h2>
+  <ul>
+    <li *ngFor="let solicitacao of solicitacoes$ | async">
+      <span>{{ getPetName(solicitacao.petId) }} - {{ getTutorName(solicitacao.tutorId) }} - {{ getServicoName(solicitacao.servicoId) }} - {{ solicitacao.data }}</span>
+      <button (click)="deleteSolicitacao(solicitacao.id!)">Excluir</button>
+    </li>
+  </ul>
+  <button routerLink="/add-solicitacao">Adicionar Solicitação</button>
+</div>

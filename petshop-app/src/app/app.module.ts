@@ -26,6 +26,9 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { AddServiceComponent } from './components/add-service/add-service.component';
 import { ServiceListComponent } from './components/service-list/service-list.component';
 import { ServicoService } from './services/servico/servico.service';
+import { AddSolicitacaoComponent } from './components/add-solicitacao/add-solicitacao.component';
+import { SolicitacaoListComponent } from './components/solicitacao-list/solicitacao-list.component';
+import { SolicitacaoService } from './services/solicitacao/solicitacao.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,9 @@ import { ServicoService } from './services/servico/servico.service';
     TutorListComponent,
     TutorFormComponent,
     AddServiceComponent,
-    ServiceListComponent
+    ServiceListComponent,
+    AddSolicitacaoComponent,
+    SolicitacaoListComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +58,7 @@ import { ServicoService } from './services/servico/servico.service';
     InputMaskModule
 
   ],
-  providers: [PetService, TutorService, CepService, IbgeService,ServicoService],
+  providers: [PetService, TutorService, CepService, IbgeService,ServicoService, SolicitacaoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
