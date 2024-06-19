@@ -20,6 +20,12 @@ import { TutorService } from './services/tutor/tutor.service';
 import { CepService } from './services/cep/cep.service';
 import { IbgeService } from './services/ibge/ibge.service';
 import { HttpClientModule } from '@angular/common/http';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { InputMaskModule } from 'primeng/inputmask';
+import { AddServiceComponent } from './components/add-service/add-service.component';
+import { ServiceListComponent } from './components/service-list/service-list.component';
+import { ServicoService } from './services/servico/servico.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,9 @@ import { HttpClientModule } from '@angular/common/http';
     PetListComponent,
     PetFormComponent,
     TutorListComponent,
-    TutorFormComponent
+    TutorFormComponent,
+    AddServiceComponent,
+    ServiceListComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +47,13 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    InputTextModule,
+    ButtonModule,
+    InputMaskModule
+
   ],
-  providers: [PetService, TutorService, CepService, IbgeService],
+  providers: [PetService, TutorService, CepService, IbgeService,ServicoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

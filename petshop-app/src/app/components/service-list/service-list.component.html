@@ -1,0 +1,10 @@
+<div>
+  <h2>Services List</h2>
+  <button routerLink="/add-service">Add New Service</button>
+  <ul>
+    <li *ngFor="let service of servicos$ | async">
+      {{ service.name }} - {{ service.description }} - R$ {{ service.price }} - {{ service.duration }} minutos
+      <button (click)="deleteService(service.id!)">Excluir</button>
+    </li>
+  </ul>
+</div>
