@@ -1,40 +1,40 @@
 <div class="container">
   <!-- Título que muda dinamicamente entre 'Editar' e 'Adicionar' Tutor -->
   <h2>{{ tutorId ? 'Edit' : 'Add' }} Tutor</h2>
-  
+
   <!-- Formulário que aciona a função onSubmit ao ser enviado -->
   <form (ngSubmit)="onSubmit()">
-    
+
     <!-- Grupo de formulário para o nome -->
     <div class="form-group">
       <label for="name">Nome:</label>
       <input pInputText type="text" id="name" [(ngModel)]="tutor.name" name="name" class="form-control" required />
     </div>
-    
+
     <!-- Grupo de formulário para o CEP, aciona a função searchCep ao perder o foco -->
     <div class="form-group">
       <label for="cep">CEP:</label>
       <input type="text" id="cep" [(ngModel)]="tutor.cep" name="cep" class="form-control" (blur)="searchCep()" required />
     </div>
-    
+
     <!-- Grupo de formulário para a rua -->
     <div class="form-group">
       <label for="street">Rua:</label>
       <input type="text" id="street" [(ngModel)]="tutor.street" name="street" class="form-control" required />
     </div>
-    
+
     <!-- Grupo de formulário para o bairro -->
     <div class="form-group">
       <label for="neighborhood">Bairro:</label>
       <input type="text" id="neighborhood" [(ngModel)]="tutor.neighborhood" name="neighborhood" class="form-control" required />
     </div>
-    
+
     <!-- Grupo de formulário para o número -->
     <div class="form-group">
       <label for="number">Número:</label>
       <input type="number" id="number" [(ngModel)]="tutor.number" name="number" class="form-control" required />
     </div>
-    
+
     <!-- Grupo de formulário para o estado, aciona a função loadCities ao mudar -->
     <div class="form-group">
       <label for="state">Estado:</label>
@@ -42,7 +42,7 @@
         <option *ngFor="let state of states" [value]="state.sigla">{{ state.nome }}</option>
       </select>
     </div>
-    
+
     <!-- Grupo de formulário para a cidade -->
     <div class="form-group">
       <label for="city">Cidade:</label>
@@ -50,19 +50,19 @@
         <option *ngFor="let city of cities" [value]="city.nome">{{ city.nome }}</option>
       </select>
     </div>
-    
+
     <!-- Grupo de formulário para o telefone com máscara de entrada -->
     <div class="form-group">
       <label for="phone">Telefone:</label>
       <p-inputMask mask="(99) 99999-9999" [(ngModel)]="tutor.phone" name="phone" placeholder="(99) 99999-9999"></p-inputMask>
     </div>
-    
+
     <!-- Grupo de formulário para o CPF com máscara de entrada -->
     <div class="form-group">
       <label for="cpf">CPF:</label>
-      <p-inputMask mask="111.111.111-11" [(ngModel)]="tutor.cpf" name="cpf"></p-inputMask>
+      <p-inputMask mask="999.999.999-99" [(ngModel)]="tutor.cpf" name="cpf" ></p-inputMask>
     </div>
-    
+
     <!-- Grupo de formulário para o sexo -->
     <div class="form-group">
       <label for="sex">Sexo:</label>
@@ -72,7 +72,7 @@
         <option value="Outro">Outro</option>
       </select>
     </div>
-    
+
     <!-- Botão de envio do formulário -->
     <button type="submit" class="btn btn-primary">{{ tutorId ? 'Update' : 'Add' }}</button>
   </form>

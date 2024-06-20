@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Pet } from '../../models/pet.model';
 import { PetService } from '../../services/pet/pet.service';
 
+
 @Component({
   selector: 'app-pet-form',
   templateUrl: './pet-form.component.html',
@@ -24,7 +25,7 @@ export class PetFormComponent implements OnInit {
     { label: 'Macho', value: 'M' },
     { label: 'Fêmea', value: 'F' }
   ];
-  
+
   isEdit: boolean = false;
 
   constructor(

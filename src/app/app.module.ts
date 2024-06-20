@@ -29,6 +29,7 @@ import { ServicoService } from './services/servico/servico.service';
 import { AddSolicitacaoComponent } from './components/add-solicitacao/add-solicitacao.component';
 import { SolicitacaoListComponent } from './components/solicitacao-list/solicitacao-list.component';
 import { SolicitacaoService } from './services/solicitacao/solicitacao.service';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { SolicitacaoService } from './services/solicitacao/solicitacao.service';
     AddServiceComponent,
     ServiceListComponent,
     AddSolicitacaoComponent,
-    SolicitacaoListComponent
+    SolicitacaoListComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ import { SolicitacaoService } from './services/solicitacao/solicitacao.service';
     AngularFirestoreModule,
     InputTextModule,
     ButtonModule,
-    InputMaskModule
+    InputMaskModule,
+    CalendarModule
 
   ],
   providers: [PetService, TutorService, CepService, IbgeService,ServicoService, SolicitacaoService],
